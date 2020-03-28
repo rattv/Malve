@@ -1,3 +1,3 @@
 $(document).ready(function() {
-     $("#overlay").delay(2000).fadeOut();
+     $("#overlay").delay(1500).fadeOut();
 });
