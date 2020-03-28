@@ -344,3 +344,8 @@ footer {
       transform: rotate(360deg);
     }
   }
+
+  #jar{
+      width: 100px;
+      height: 100px;
+  }

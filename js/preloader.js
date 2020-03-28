@@ -1,3 +1,3 @@
 setTimeout(function() {
      $('.overlay').fadeToggle();
- }, 1500);
+ }, 2500);
