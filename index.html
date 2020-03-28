@@ -167,9 +167,6 @@
                     <div class="swiper-pagination"></div>
                 </div>
             </div>
-
-
-
         </article>
     </section>
 
@@ -179,38 +176,15 @@
     </footer>
 
     <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <script src = "js/preloader.js"></script>
     <script src="js/script.js"></script>
     <script src="countdown/jquery.countdown.js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src = "js/popup.js"></script>
     <script src="js/swiper.min.js"></script>
+    <script src = "js/swiper.js"></script>
     <!-- Initialize Swiper -->
-    <script>
-        var swiper = new Swiper('.swiper-container', {
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-                renderBullet: function(index, className) {
-                    return '<span class="' + className + '">' + (index + 1) + '</span>';
-                },
-            },
-        });
 
-        var button = document.getElementById("btn");
-        button.addEventListener('click', function() {
-            swal({
-                title: "Да это же скидка на целых 45%!",
-                text: "Успейте купить наш майонез, пока он совсем не просрочился!",
-                value: true,
-                visible: true,
-                className: "",
-                closeModal: true,
-            });
-        });
-
-        $(document).ready(function() {
-     $("#overlay").delay(2000).fadeOut();
-    });
-    </script>
 </body>
 
 </html>
