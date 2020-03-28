@@ -294,7 +294,7 @@ footer {
 
 /*======PRELOADER=========*/
 
-#overlay {
+.overlay {
     font-family: 'Pacifico', cursive;
     background: #f0f0f0;
     position: fixed;
