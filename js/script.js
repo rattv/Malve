@@ -17,16 +17,12 @@ $(function() {
 
             var message = "";
 
-            message += days + " дней" + (days == 1 ? '' : '') + ", ";
-            message += hours + " часа" + (hours == 1 ? '' : '') + ", ";
-            message += minutes + " минут" + (minutes == 1 ? '' : '') + " и ";
-            message += seconds + " секунд" + (seconds == 1 ? '' : '') + " <br />";
+            message += days + " дней " ;
+            message += hours + " часа ";
+            message += minutes + " минут " + " и ";
+            message += seconds + " секунд " + " <br />";
 
-            if (newYear) {
-                message += "left until the new year!";
-            } else {
                 message += "Осталось всего лишь 10 дней, чтобы купить наш товар по выгодной цене!" + "</br>" + "(Мы не скрываем, что вам придёт просрочка)";
-            }
 
             note.html(message);
         }
