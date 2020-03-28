@@ -62,7 +62,7 @@ a:hover {
     max-width: 1140px;
     margin: 0 auto;
     margin-top: 25px;
-    margin-bottom: 25px;
+    margin-bottom: 55px;
     padding-left: 30px;
     padding-right: 30px;
     background-image: url('../img/bg.jpg');
@@ -71,6 +71,8 @@ a:hover {
     background-size: cover;
     padding-top: 220px;
     padding-bottom: 285px;
+    position: relative;
+    overflow: hidden;
 }
 
 .banner-title {
@@ -89,7 +91,7 @@ a:hover {
 /*=========ABOUT-US=========*/
 
 .about-us {
-    margin-top: 65px;
+    margin-top: 35px;
     margin-bottom: 65px;
     text-align: center;
 }
@@ -134,7 +136,7 @@ a:hover {
     max-height: 150px;
     position: relative;
     margin-bottom: 40px;
-    left: -210px;
+    left: -230px;
 }
 
 .text-info {
@@ -208,3 +210,137 @@ footer {
     text-align: center;
     padding: 10px 0 10px;
 }
+
+.swiper-container {
+    max-width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    background: #fff;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.swiper-pagination-bullet {
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    font-size: 12px;
+    color: #000;
+    opacity: 1;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.swiper-pagination-bullet-active {
+    color: #fff;
+    background: #007aff;
+}
+
+#note {
+    color: #000;
+    font-size: 12px;
+    margin: 0 auto;
+    padding: 4px;
+    text-align: center;
+    text-shadow: 1px 1px 0 #fff;
+    width: 400px;
+}
+
+.sale {
+    position: absolute;
+    right: -120px;
+    top: 80px;
+    transform: rotate(45deg);
+}
+
+#btn {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: 700;
+    background-image: url('../img/sale.png');
+    background-position: center center;
+    text-decoration: none;
+    padding: 29px 150px;
+    background-repeat: no-repeat;
+}
+
+#btn:hover {
+    text-decoration: none;
+}
+
+.swal-text {
+    background-color: #FEFAE3;
+    padding: 17px;
+    border: 1px solid #F0E1A1;
+    display: block;
+    margin: 22px;
+    text-align: center;
+    color: #61534e;
+}
+
+/*======PRELOADER=========*/
+
+#overlay {
+    font-family: 'Pacifico', cursive;
+    background: #f0f0f0;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+  }
+  .wrapper {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .loadtext {
+    position: fixed;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: fadeinout 1.5s ease-in-out infinite;
+    font-size: 30px;
+  }
+  .spinner {
+    border: solid 15px #fff;
+    border-top: solid 15px #ffbe46;
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+    animation: spin 1s linear infinite;
+  }
+  @keyframes fadeinout {
+    0%,
+    100% {
+      opacity: 0.5;
+    }
+    50% {
+      opacity: 1;
+    }
+  }
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }

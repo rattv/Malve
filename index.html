@@ -8,11 +8,21 @@
     <meta name="keywords" content="Мальве, майонез, вкусный майонез, топ один майонез, лучший майонез, что приготовить с майонезом" />
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300i,400,400i,500i,600,600i,700,700i,800,800i|Pacifico&display=swap&subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="countdown/jquery.countdown.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Мальве - Майонез №1 в России</title>
 </head>
 
 <body>
+
+    <div id="overlay">
+        <div class="wrapper">
+          <span class="loadtext">Загружаю майонез Мальве</span>
+          <div class="spinner"></div>
+        </div>
+      </div>
+
     <header>
         <div class="logo">Мальве</div>
         <nav>
@@ -22,11 +32,20 @@
         </nav>
     </header>
     <div class="banner">
+        <div class="sale">
+            <a href="#" id="btn">Sale 45%</a>
+        </div>
         <h1 class="banner-title"><strong>Очень вкусный Майонез</strong></h1>
         <div class="banner-subtitle">
             Вкуснее только соус в шаурмичной
         </div>
+     
+
     </div>
+
+    <div id="countdown"></div>
+    <p id="note"></p>
+   
     <section>
 
         <article class="about-us">
@@ -75,37 +94,82 @@
         <article class="feedback">
             <div class="container">
                 <h2 class="title" id="feedback">Отзывы</h2>
-                <div class="feedback-inner">
-                    <div class="feed">
-                        <img src="img/feedback-1.jpg" alt="photo" class="photo-feed">
-                        <div class="text-feedback">
-                            <div class="name-author">Галина Николаевна, 65 лет</div>
-                            <div class="description">Когда я попробовала этот майонез у меня сразу восстановилось давление, пропали все болезни. Купила всем своим родственникам, рекомендую!</div>
+                <!-- Swiper -->
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="feedback-inner">
+                                <div class="feed">
+                                    <img src="img/feedback-1.jpg" alt="photo" class="photo-feed">
+                                    <div class="text-feedback">
+                                        <div class="name-author">Галина Николаевна, 65 лет</div>
+                                        <div class="description">Когда я попробовала этот майонез у меня сразу восстановилось давление, пропали все болезни. Купила всем своим родственникам, рекомендую!</div>
+                                    </div>
+                                </div>
+                                <div class="feed">
+                                    <img src="img/feedback-2.jpg" alt="photo" class="photo-feed">
+                                    <div class="text-feedback">
+                                        <div class="name-author">Борис Петров, 35 лет</div>
+                                        <div class="description">Я заправляю майонезом всё, что я только ем. В том числе, гейнер с майонезом, креатин с майонезом. Ты видишь мой бицепс? Это всё от майонеза "Мальве".</div>
+                                    </div>
+                                </div>
+                                <div class="feed">
+                                    <img src="img/feedback-3.jpg" alt="photo" class="photo-feed">
+                                    <div class="text-feedback">
+                                        <div class="name-author">Гарольд, 75 лет</div>
+                                        <div class="description">За всю свою жизнь я перепробовал 100 разных пачек майонеза и остановился на майонезе "Мальве". Никогда не был так счастлив!</div>
+                                    </div>
+                                </div>
+                                <div class="feed">
+                                    <img src="img/feedback-4.jpg" alt="photo" class="photo-feed">
+                                    <div class="text-feedback">
+                                        <div class="name-author">Рикардо Милос, 42 года</div>
+                                        <div class="description">Знаете, как я стал знаменит? Я перед этим просто купил майонез "Мальве" и моя жизнь перевернулась с ног на голову.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="feedback-inner">
+                                <div class="feed">
+                                    <img src="img/feedback-5.jpeg" alt="photo" class="photo-feed">
+                                    <div class="text-feedback">
+                                        <div class="name-author">Галина Николаевна, 65 лет</div>
+                                        <div class="description">Когда я попробовала этот майонез у меня сразу восстановилось давление, пропали все болезни. Купила всем своим родственникам, рекомендую!</div>
+                                    </div>
+                                </div>
+                                <div class="feed">
+                                    <img src="img/feedback-6.jpg" alt="photo" class="photo-feed">
+                                    <div class="text-feedback">
+                                        <div class="name-author">Борис Петров, 35 лет</div>
+                                        <div class="description">Я заправляю майонезом всё, что я только ем. В том числе, гейнер с майонезом, креатин с майонезом. Ты видишь мой бицепс? Это всё от майонеза "Мальве".</div>
+                                    </div>
+                                </div>
+                                <div class="feed">
+                                    <img src="img/feedback-7.jpg" alt="photo" class="photo-feed">
+                                    <div class="text-feedback">
+                                        <div class="name-author">Гарольд, 75 лет</div>
+                                        <div class="description">За всю свою жизнь я перепробовал 100 разных пачек майонеза и остановился на майонезе "Мальве". Никогда не был так счастлив!</div>
+                                    </div>
+                                </div>
+                                <div class="feed">
+                                    <img src="img/feedback-8.jpg" alt="photo" class="photo-feed">
+                                    <div class="text-feedback">
+                                        <div class="name-author">Рикардо Милос, 42 года</div>
+                                        <div class="description">Знаете, как я стал знаменит? Я перед этим просто купил майонез "Мальве" и моя жизнь перевернулась с ног на голову.</div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="feed">
-                        <img src="img/feedback-2.jpg" alt="photo" class="photo-feed">
-                        <div class="text-feedback">
-                            <div class="name-author">Борис Петров, 35 лет</div>
-                            <div class="description">Я заправляю майонезом всё, что я только ем. В том числе, гейнер с майонезом, креатин с майонезом. Ты видишь мой бицепс? Это всё от майонеза "Мальве".</div>
-                        </div>
-                    </div>
-                    <div class="feed">
-                        <img src="img/feedback-3.jpg" alt="photo" class="photo-feed">
-                        <div class="text-feedback">
-                            <div class="name-author">Гарольд, 75 лет</div>
-                            <div class="description">За всю свою жизнь я перепробовал 100 разных пачек майонеза и остановился на майонезе "Мальве". Никогда не был так счастлив!</div>
-                        </div>
-                    </div>
-                    <div class="feed">
-                        <img src="img/feedback-4.jpg" alt="photo" class="photo-feed">
-                        <div class="text-feedback">
-                            <div class="name-author">Рикардо Милос, 42 года</div>
-                            <div class="description">Знаете, как я стал знаменит? Я перед этим просто купил майонез "Мальве" и моя жизнь перевернулась с ног на голову.</div>
-                        </div>
-                    </div>
+                    <!-- Add Arrows -->
+                    <div class="swiper-pagination"></div>
                 </div>
             </div>
+
+
+
         </article>
     </section>
 
@@ -113,6 +177,40 @@
         <div class="footer-description">Сайт создан в учебных целях и не несёт никакой смысловой нагрузки</div>
         <div class="copyright">Made by Ratnikova & Sedoykin</div>
     </footer>
+
+    <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="countdown/jquery.countdown.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+                renderBullet: function(index, className) {
+                    return '<span class="' + className + '">' + (index + 1) + '</span>';
+                },
+            },
+        });
+
+        var button = document.getElementById("btn");
+        button.addEventListener('click', function() {
+            swal({
+                title: "Да это же скидка на целых 45%!",
+                text: "Успейте купить наш майонез, пока он совсем не просрочился!",
+                value: true,
+                visible: true,
+                className: "",
+                closeModal: true,
+            });
+        });
+
+        $(document).ready(function() {
+     $("#overlay").delay(2000).fadeOut();
+    });
+    </script>
 </body>
 
 </html>
